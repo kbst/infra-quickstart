@@ -15,4 +15,4 @@ steps:
 artifacts:
   objects:
     location: 'gs://$_QUICKSTART_BUCKET_NAME'
-    paths: ['_dist/*.txz']
+    paths: ['_dist/*.zip']

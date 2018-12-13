@@ -28,9 +28,12 @@ for configuration in configurations:
     archive_name = f'{configuration_dist}-{version}'
     manifests_src = f'{SRCDIR}/manifests'
     manifests_dist = f'{configuration_dist}/manifests'
+    cicd_src = f'{SRCDIR}/ci-cd'
+    cicd_dist = f'{configuration_dist}/ci-cd'
 
     copytree(configuration_src, configuration_dist)
     copytree(manifests_src, manifests_dist)
+    copytree(cicd_src, cicd_dist)
 
     shutil.make_archive(
         archive_name, 'zip', f'{DISTDIR}', configuration_name)

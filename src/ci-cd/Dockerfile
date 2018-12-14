@@ -56,11 +56,13 @@ RUN echo "GOOGLE_CLOUD_SDK_VERSION: ${GOOGLE_CLOUD_SDK_VERSION}" \
 FROM python:2.7-alpine
 
 COPY --from=builder /opt /opt
-ENV PATH=/opt/bin:/opt/google-cloud-sdk/bin:$PATH
+ENV PATH=/opt/bin:/opt/google-cloud-sdk/bin:$PATH \
+    HOME=/infra/.user
 
 RUN apk add --no-cache \
     ca-certificates \
     git \
     jq
 
+WORKDIR /infra
 CMD sh

@@ -19,7 +19,8 @@ if isdir(DISTDIR):
 mkdir(DISTDIR)
 
 # Copy configuration
-configurations = [n for n in listdir(f'{SRCDIR}/configurations')]
+configurations = [n for n in listdir(f'{SRCDIR}/configurations')
+                  if not n.startswith('_')]
 
 for configuration in configurations:
     configuration_name = f'infra-quickstart-{configuration}'

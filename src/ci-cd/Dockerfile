@@ -62,7 +62,9 @@ ENV PATH=/opt/bin:/opt/google-cloud-sdk/bin:$PATH \
 RUN apk add --no-cache \
     ca-certificates \
     git \
-    jq
+    jq \
+    openssh-client \
+    && adduser -D -H -h /infra/.user kbst
 
 WORKDIR /infra
 CMD sh

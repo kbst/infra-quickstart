@@ -3,7 +3,7 @@ module "eks_zero" {
     aws = "aws.eks_zero"
   }
 
-  source = "github.com/kbst/terraform-kubestack//aws/cluster"
+  source = "github.com/kbst/terraform-kubestack//aws/cluster?ref=v0.1.0-alpha.0"
 
   configuration = "${var.clusters["eks_zero"]}"
 }

@@ -64,6 +64,7 @@ RUN apk add --no-cache \
     git \
     jq \
     openssh-client \
+    bind-tools \
     && adduser -D -H -h /infra/.user kbst
 
 WORKDIR /infra

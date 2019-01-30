@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 
-import shutil
 from os import environ, listdir, mkdir
 from os.path import isdir
-from shutil import copytree, rmtree
+from shutil import copytree, make_archive, rmtree
 
 SRCDIR = 'src'
 DISTDIR = '_dist'
@@ -36,5 +35,4 @@ for configuration in configurations:
     copytree(manifests_src, manifests_dist)
     copytree(cicd_src, cicd_dist)
 
-    shutil.make_archive(
-        archive_name, 'zip', f'{DISTDIR}', configuration_name)
+    make_archive(archive_name, 'zip', f'{DISTDIR}', configuration_name)

@@ -7,3 +7,6 @@
 
 # .user home directory
 .user/
+
+# terraform generated clusters directory
+clusters/

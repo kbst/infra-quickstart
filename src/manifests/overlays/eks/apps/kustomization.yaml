@@ -1,2 +1,0 @@
-bases:
-- ../both               # inherit configuration specifc to EKS
